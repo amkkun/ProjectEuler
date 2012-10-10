@@ -1,5 +1,5 @@
-fib :: [Integer]
+fib :: [Int]
 fib = 1 : 2 : zipWith (+) fib (tail fib)
 
-solve :: [Integer] -> Integer
+solve :: [Int] -> Int
 solve = sum . filter even . takeWhile (< 4000000)
